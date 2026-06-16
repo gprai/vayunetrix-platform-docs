@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1560" viewBox="0 0 2400 1560" role="img" aria-labelledby="title desc">
+  <title id="title">VayuNetrix AWS Platform end-to-end architecture</title>
+  <desc id="desc">Customer portal, SaaS control plane, secure connector, workers, platform intelligence, Terraform roots, AWS organization, governance, remediation, cost and evidence flows.</desc>
+  <defs>
+    <linearGradient id="header" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#4338ca"/><stop offset="0.5" stop-color="#2563eb"/><stop offset="1" stop-color="#0891b2"/></linearGradient>
+    <linearGradient id="clientBand" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#eef2ff"/><stop offset="1" stop-color="#ecfeff"/></linearGradient>
+    <linearGradient id="saasBand" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f5f3ff"/><stop offset="1" stop-color="#eff6ff"/></linearGradient>
+    <linearGradient id="connectorBand" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ecfeff"/><stop offset="1" stop-color="#f0fdfa"/></linearGradient>
+    <linearGradient id="engineBand" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#faf5ff"/><stop offset="1" stop-color="#eef2ff"/></linearGradient>
+    <linearGradient id="awsBand" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f0fdf4"/><stop offset="1" stop-color="#fffbeb"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#172554" flood-opacity="0.13"/></filter>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#2563eb"/></marker>
+    <marker id="arrowViolet" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#7c3aed"/></marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#059669"/></marker>
+    <marker id="arrowCoral" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#e11d48"/></marker>
+    <style>
+      text{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#172554;letter-spacing:0}.title{font-size:44px;font-weight:800;fill:white}.subtitle{font-size:21px;fill:#dbeafe}.bandTitle{font-size:23px;font-weight:800}.bandNote{font-size:15px;fill:#475569}.cardTitle{font-size:18px;font-weight:750}.body{font-size:14px;fill:#334155}.tiny{font-size:12px;fill:#475569}.journey{font-size:14px;font-weight:700;fill:#3730a3}.white{fill:white}.lineBlue{stroke:#2563eb;stroke-width:3;fill:none;marker-end:url(#arrowBlue)}.lineViolet{stroke:#7c3aed;stroke-width:3;fill:none;marker-end:url(#arrowViolet)}.lineGreen{stroke:#059669;stroke-width:3;fill:none;marker-end:url(#arrowGreen)}.lineCoral{stroke:#e11d48;stroke-width:3;fill:none;marker-end:url(#arrowCoral)}.dash{stroke-dasharray:8 7}.card{fill:white;stroke-width:2;filter:url(#shadow)}
+    </style>
+  </defs>
+
+  <rect width="2400" height="1560" fill="#f8fafc"/>
+  <rect width="2400" height="88" fill="url(#header)"/>
+  <text x="56" y="52" class="title">VayuNetrix AWS Platform - End-to-End Architecture</text>
+  <text x="56" y="77" class="subtitle">Guided architecture, guarded execution, continuous governance, remediation, cost control, and evidence</text>
+  <rect x="1930" y="20" width="414" height="45" rx="8" fill="#ffffff" fill-opacity="0.16" stroke="#ffffff" stroke-opacity="0.45"/>
+  <text x="1954" y="48" font-size="17" font-weight="700" fill="white">portal.vayunetrix.com  |  Client AWS</text>
+
+  <!-- Customer experience -->
+  <rect x="30" y="108" width="2340" height="220" rx="14" fill="url(#clientBand)" stroke="#60a5fa" stroke-width="2"/>
+  <text x="52" y="140" class="bandTitle" fill="#1d4ed8">1  CUSTOMER EXPERIENCE AND CLIENT JOURNEY</text>
+  <text x="52" y="163" class="bandNote">The portal guides decisions, exposes risk and impact, gathers approvals, and shows sanitized live status.</text>
+  <g filter="url(#shadow)">
+    <rect x="52" y="181" width="220" height="112" rx="9" fill="white" stroke="#3b82f6" stroke-width="2"/>
+    <text x="72" y="211" class="cardTitle">Public Entry</text><text x="72" y="238" class="body">vayunetrix.com</text><text x="72" y="260" class="body">Signup + email confirm</text><text x="72" y="282" class="body">Login and workspace access</text>
+    <rect x="296" y="181" width="270" height="112" rx="9" fill="white" stroke="#6366f1" stroke-width="2"/>
+    <text x="316" y="211" class="cardTitle">Architecture Builder</text><text x="316" y="238" class="body">Business, regions, accounts</text><text x="316" y="260" class="body">Governance, security, network</text><text x="316" y="282" class="body">Cost controls and packages</text>
+    <rect x="590" y="181" width="250" height="112" rx="9" fill="white" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="610" y="211" class="cardTitle">Intake Experience</text><text x="610" y="238" class="body">Workbook upload</text><text x="610" y="260" class="body">Guided forms + version diff</text><text x="610" y="282" class="body">Lineage and validation</text>
+    <rect x="864" y="181" width="250" height="112" rx="9" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+    <text x="884" y="211" class="cardTitle">Impact + Approvals</text><text x="884" y="238" class="body">Create / update / delete</text><text x="884" y="260" class="body">Cost, policy, security, blast radius</text><text x="884" y="282" class="body">Bound approval decisions</text>
+    <rect x="1138" y="181" width="260" height="112" rx="9" fill="white" stroke="#06b6d4" stroke-width="2"/>
+    <text x="1158" y="211" class="cardTitle">Live Operations</text><text x="1158" y="238" class="body">Commands, logs, elapsed time</text><text x="1158" y="260" class="body">Pause, cancel, retry, resume</text><text x="1158" y="282" class="body">Failed-step explanation</text>
+    <rect x="1422" y="181" width="360" height="112" rx="9" fill="white" stroke="#0ea5e9" stroke-width="2"/>
+    <text x="1442" y="211" class="cardTitle">Workspace Command Center</text><text x="1442" y="238" class="body">Setup progress, risk, runs, connector</text><text x="1442" y="260" class="body">Governance, security, drift, remediation</text><text x="1442" y="282" class="body">Cost, reports and evidence vault</text>
+    <rect x="1806" y="181" width="530" height="112" rx="9" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+    <text x="1826" y="211" class="cardTitle">Client Journey</text>
+    <text x="1826" y="242" class="journey">Register -> Select -> Connect -> Validate -> Generate</text>
+    <text x="1826" y="270" class="journey">Review -> Approve -> Provision -> Evidence -> Operate</text>
+  </g>
+
+  <!-- SaaS control plane -->
+  <rect x="30" y="350" width="2340" height="215" rx="14" fill="url(#saasBand)" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="52" y="382" class="bandTitle" fill="#6d28d9">2  HOSTED SAAS CONTROL PLANE</text>
+  <text x="52" y="405" class="bandNote">Tenant-safe coordination and metadata. No credentials, tfvars bodies, Terraform state, ARNs, account IDs, or private architecture details.</text>
+  <g>
+    <rect class="card" x="52" y="425" width="280" height="105" rx="9" stroke="#6366f1"/><text x="72" y="455" class="cardTitle">Portal Backend API</text><text x="72" y="481" class="body">REST APIs + sanitized streaming</text><text x="72" y="504" class="body">Workflow and connector contracts</text>
+    <rect class="card" x="352" y="425" width="260" height="105" rx="9" stroke="#7c3aed"/><text x="372" y="455" class="cardTitle">Identity + Tenancy</text><text x="372" y="481" class="body">Authentication, RBAC</text><text x="372" y="504" class="body">Tenant/workspace isolation</text>
+    <rect class="card" x="632" y="425" width="290" height="105" rx="9" stroke="#f59e0b"/><text x="652" y="455" class="cardTitle">Entitlements + Gates</text><text x="652" y="481" class="body">Package, add-on, quota, region</text><text x="652" y="504" class="body">Feature toggles + impact notes</text>
+    <rect class="card" x="942" y="425" width="300" height="105" rx="9" stroke="#8b5cf6"/><text x="962" y="455" class="cardTitle">Configuration Registry</text><text x="962" y="481" class="body">Versions, lineage, diffs</text><text x="962" y="504" class="body">Approved snapshot metadata</text>
+    <rect class="card" x="1262" y="425" width="300" height="105" rx="9" stroke="#2563eb"/><text x="1282" y="455" class="cardTitle">PostgreSQL Metadata</text><text x="1282" y="481" class="body">Users, workspaces, selections</text><text x="1282" y="504" class="body">Runs, audit and report indexes</text>
+    <rect class="card" x="1582" y="425" width="350" height="105" rx="9" stroke="#f59e0b"/><text x="1602" y="455" class="cardTitle">Approval + Plan Binding</text><text x="1602" y="481" class="body">Immutable plan/remediation approval</text><text x="1602" y="504" class="body">Actor, expiry and emergency override</text>
+    <rect class="card" x="1952" y="425" width="384" height="105" rx="9" stroke="#0ea5e9"/><text x="1972" y="455" class="cardTitle">Commercial + Integration</text><text x="1972" y="481" class="body">Billing provider, notifications</text><text x="1972" y="504" class="body">Parent website sync + support audit</text>
+  </g>
+
+  <!-- Connector and worker -->
+  <rect x="30" y="587" width="2340" height="236" rx="14" fill="url(#connectorBand)" stroke="#06b6d4" stroke-width="2"/>
+  <text x="52" y="619" class="bandTitle" fill="#0e7490">3  SECURE CLIENT CONNECTOR AND PRODUCTION EXECUTION PLANE</text>
+  <text x="52" y="642" class="bandNote">Approved work runs in the client-controlled context. Only sanitized status and non-sensitive indexes return to the hosted portal.</text>
+  <rect x="52" y="661" width="875" height="132" rx="10" fill="#ffffff" stroke="#e11d48" stroke-width="3" stroke-dasharray="9 6"/>
+  <text x="72" y="690" class="cardTitle" fill="#be123c">CLIENT-CONTROLLED SENSITIVE DATA BOUNDARY</text>
+  <rect x="72" y="708" width="210" height="63" rx="7" fill="#ecfeff" stroke="#0891b2"/><text x="89" y="735" class="cardTitle">Local Connector</text><text x="89" y="758" class="tiny">Allowlisted command runner</text>
+  <rect x="299" y="708" width="190" height="63" rx="7" fill="#f0fdfa" stroke="#0d9488"/><text x="316" y="735" class="cardTitle">Runtime Cache</text><text x="316" y="758" class="tiny">Session-only; clear on logout</text>
+  <rect x="506" y="708" width="397" height="63" rx="7" fill="#fff1f2" stroke="#e11d48"/><text x="523" y="735" class="cardTitle">Private Artifact Workspace</text><text x="523" y="758" class="tiny">Workbook, tfvars, state, plans, credentials, ARNs, full logs</text>
+  <rect class="card" x="957" y="661" width="250" height="132" rx="9" stroke="#0891b2"/><text x="977" y="692" class="cardTitle">External Broker</text><text x="977" y="719" class="body">Priority route queues</text><text x="977" y="742" class="body">Scheduled and approved jobs</text><text x="977" y="765" class="body">DLQ + redrive</text>
+  <rect class="card" x="1227" y="661" width="300" height="132" rx="9" stroke="#06b6d4"/><text x="1247" y="692" class="cardTitle">Dedicated Worker Pool</text><text x="1247" y="719" class="body">Lease, heartbeat, timeout</text><text x="1247" y="742" class="body">Retry, resume, cancel</text><text x="1247" y="765" class="body">Idempotent execution routes</text>
+  <rect class="card" x="1547" y="661" width="350" height="132" rx="9" stroke="#7c3aed"/><text x="1567" y="692" class="cardTitle">Execution Safety</text><text x="1567" y="719" class="body">Saved-plan freshness + approval binding</text><text x="1567" y="742" class="body">Policy, cost, security, blast radius</text><text x="1567" y="765" class="body">Locks: tenant/workspace/account/region/root</text>
+  <rect class="card" x="1917" y="661" width="419" height="132" rx="9" stroke="#0ea5e9"/><text x="1937" y="692" class="cardTitle">Live Status + Audit</text><text x="1937" y="719" class="body">Sanitized WebSocket / SSE events</text><text x="1937" y="742" class="body">Requested -> queued -> leased -> executed</text><text x="1937" y="765" class="body">Verified -> evidence attached</text>
+
+  <!-- Platform engine -->
+  <rect x="30" y="845" width="2340" height="310" rx="14" fill="url(#engineBand)" stroke="#7c3aed" stroke-width="2"/>
+  <text x="52" y="877" class="bandTitle" fill="#6d28d9">4  PLATFORM INTELLIGENCE, ORCHESTRATION, ASSURANCE, AND REMEDIATION</text>
+  <text x="52" y="900" class="bandNote">Python platform intelligence coordinates guarded Terraform and AWS-native operations; every path remains entitlement-, policy-, and approval-aware.</text>
+  <rect class="card" x="52" y="920" width="400" height="195" rx="10" stroke="#6366f1"/><text x="72" y="951" class="cardTitle">Intake + Configuration Registry</text><text x="72" y="980" class="body">- Validate workbook and guided intake</text><text x="72" y="1004" class="body">- Enterprise normalization + schema migration</text><text x="72" y="1028" class="body">- Bulk import, version diff and lineage</text><text x="72" y="1052" class="body">- Business unit -> account -> region hierarchy</text><text x="72" y="1076" class="body">- Generate target-specific Terraform tfvars</text><text x="72" y="1100" class="body">- Materialize/import connector-local workbook</text>
+  <rect class="card" x="472" y="920" width="400" height="195" rx="10" stroke="#8b5cf6"/><text x="492" y="951" class="cardTitle">Provisioning + Terraform Orchestration</text><text x="492" y="980" class="body">- Account create / adopt / import / lifecycle</text><text x="492" y="1004" class="body">- OU, quota, package and baseline gates</text><text x="492" y="1028" class="body">- Dependency graph and execution waves</text><text x="492" y="1052" class="body">- Multi-account / multi-region fanout</text><text x="492" y="1076" class="body">- Guarded plan -out and approved apply</text><text x="492" y="1100" class="body">- Import, decommission and evidence writeback</text>
+  <rect class="card" x="892" y="920" width="400" height="195" rx="10" stroke="#2563eb"/><text x="912" y="951" class="cardTitle">Policy + Live Assurance</text><text x="912" y="980" class="body">- OPA / Conftest policy validation</text><text x="912" y="1004" class="body">- Governance and Control Tower checks</text><text x="912" y="1028" class="body">- Security compliance collectors</text><text x="912" y="1052" class="body">- SCP simulation + exception lifecycle</text><text x="912" y="1076" class="body">- Drift detection + root-cause classification</text><text x="912" y="1100" class="body">- Identity, network and exposure intelligence</text>
+  <rect class="card" x="1312" y="920" width="505" height="195" rx="10" stroke="#e11d48"/><text x="1332" y="951" class="cardTitle">Remediation Router + Execution</text><text x="1332" y="980" class="body">Detect -> Classify -> Plan -> Review -> Approve</text><text x="1332" y="1004" class="body">Terraform repair | state cleanup | StackSet repair</text><text x="1332" y="1028" class="body">AWS Config | SSM Automation | EventBridge + Lambda</text><text x="1332" y="1052" class="body">Control Tower lifecycle | SCP enforcement</text><text x="1332" y="1076" class="body">Manual runbooks | post-repair drift verification</text><text x="1332" y="1100" class="body">Before/after evidence and immutable audit links</text>
+  <rect class="card" x="1837" y="920" width="499" height="195" rx="10" stroke="#059669"/><text x="1857" y="951" class="cardTitle">FinOps + Evidence</text><text x="1857" y="980" class="body">- Cost by account, team, environment, app</text><text x="1857" y="1004" class="body">- Showback, chargeback, forecast and budgets</text><text x="1857" y="1028" class="body">- NAT, transfer and regional cost risks</text><text x="1857" y="1052" class="body">- Validation, plan and policy summaries</text><text x="1857" y="1076" class="body">- Governance, security and drift evidence</text><text x="1857" y="1100" class="body">- Evidence pack, retention and audit index</text>
+
+  <!-- AWS -->
+  <rect x="30" y="1177" width="2340" height="330" rx="14" fill="url(#awsBand)" stroke="#22c55e" stroke-width="2"/>
+  <text x="52" y="1209" class="bandTitle" fill="#047857">5  TERRAFORM ROOTS AND CLIENT AWS ORGANIZATION</text>
+  <text x="52" y="1232" class="bandNote">Durable cloud resources remain in the client organization and accounts. Provider fanout targets approved accounts and regions.</text>
+  <rect x="52" y="1250" width="435" height="219" rx="10" fill="white" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)"/>
+  <text x="72" y="1281" class="cardTitle">Terraform Root Dependency Graph</text><text x="72" y="1310" class="body">Bootstrap -> Organizations -> Control Tower</text><text x="72" y="1336" class="body">Organizations -> Identity Center</text><text x="72" y="1362" class="body">Organizations -> Security</text><text x="72" y="1388" class="body">Organizations -> Networking</text><text x="72" y="1414" class="body">Networking -> Enterprise Networking</text><text x="72" y="1444" class="tiny">Saved plans, target approvals, policy checks, locks</text>
+  <rect x="507" y="1250" width="815" height="219" rx="10" fill="white" stroke="#16a34a" stroke-width="2" filter="url(#shadow)"/>
+  <text x="527" y="1281" class="cardTitle">AWS Organizations - Multi-Account Foundation</text>
+  <rect x="527" y="1300" width="160" height="54" rx="7" fill="#dcfce7" stroke="#16a34a"/><text x="543" y="1324" class="body" font-weight="700">Management</text><text x="543" y="1343" class="tiny">Billing + org root</text>
+  <rect x="705" y="1300" width="185" height="132" rx="7" fill="#fef2f2" stroke="#ef4444"/><text x="721" y="1324" class="body" font-weight="700">Security OU</text><text x="721" y="1350" class="tiny">Audit</text><text x="721" y="1372" class="tiny">Log Archive</text><text x="721" y="1394" class="tiny">Delegated admins</text>
+  <rect x="908" y="1300" width="185" height="132" rx="7" fill="#ecfeff" stroke="#06b6d4"/><text x="924" y="1324" class="body" font-weight="700">Infrastructure OU</text><text x="924" y="1350" class="tiny">Shared Services</text><text x="924" y="1372" class="tiny">Network / DNS</text><text x="924" y="1394" class="tiny">Inspection + endpoints</text>
+  <rect x="1111" y="1300" width="185" height="132" rx="7" fill="#eef2ff" stroke="#6366f1"/><text x="1127" y="1324" class="body" font-weight="700">Workloads OU</text><text x="1127" y="1350" class="tiny">Dev | Stage | Prod</text><text x="1127" y="1372" class="tiny">Sandbox / Playground</text><text x="1127" y="1394" class="tiny">Exceptions OU</text>
+  <text x="527" y="1452" class="tiny">SCPs | governed OU waves | account vending | baseline readiness | lifecycle alignment</text>
+  <rect x="1342" y="1250" width="994" height="219" rx="10" fill="white" stroke="#22c55e" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1362" y="1281" class="cardTitle">AWS Services, Regional Foundations, and Native Repair</text>
+  <text x="1362" y="1312" class="body">Governance + Identity</text><text x="1548" y="1312" class="tiny">Organizations, SCPs, Control Tower, IAM Identity Center, StackSets</text>
+  <text x="1362" y="1342" class="body">Security + Audit</text><text x="1548" y="1342" class="tiny">GuardDuty, Security Hub, Config, Access Analyzer, CloudTrail, S3 controls</text>
+  <text x="1362" y="1372" class="body">Network Platform</text><text x="1548" y="1372" class="tiny">VPC, TGW, Network Firewall, Route 53 Resolver, Endpoints, PrivateLink, DX/VPN</text>
+  <text x="1362" y="1402" class="body">Automation</text><text x="1548" y="1402" class="tiny">AWS Config remediation, SSM Automation, EventBridge, Lambda, lifecycle repair</text>
+  <text x="1362" y="1432" class="body">FinOps</text><text x="1548" y="1432" class="tiny">Budgets, Cost Explorer, CUR, allocation tags, showback and chargeback</text>
+  <rect x="1968" y="1294" width="340" height="132" rx="7" fill="#f0fdf4" stroke="#22c55e"/><text x="1988" y="1320" class="body" font-weight="700">Approved Regional Fanout</text><text x="1988" y="1347" class="tiny">us-east-1 | eu-west-1</text><text x="1988" y="1370" class="tiny">eu-central-1 | ap-southeast-1</text><text x="1988" y="1393" class="tiny">Account + region provider aliases</text><text x="1988" y="1416" class="tiny">Residency + blast-radius gates</text>
+
+  <!-- Main directional flows -->
+  <path d="M1180 328 L1180 346" class="lineBlue"/>
+  <path d="M1180 565 L1180 583" class="lineViolet"/>
+  <path d="M1180 823 L1180 841" class="lineViolet"/>
+  <path d="M1180 1155 L1180 1173" class="lineGreen"/>
+  <path d="M2250 1175 C2380 1080 2380 760 2250 568" class="lineGreen dash"/>
+  <text x="2210" y="865" transform="rotate(-90 2210 865)" font-size="15" font-weight="700" fill="#047857">AWS LIVE STATE -> COLLECTORS -> DASHBOARDS + EVIDENCE</text>
+  <path d="M1560 1117 C1560 1148 1060 1148 1060 1117" class="lineCoral"/>
+  <text x="1190" y="1144" font-size="14" font-weight="700" fill="#be123c">VERIFY -> EVIDENCE -> DETECT AGAIN</text>
+
+  <!-- Footer legend -->
+  <rect x="30" y="1520" width="2340" height="28" rx="6" fill="#e2e8f0"/>
+  <circle cx="65" cy="1534" r="7" fill="#2563eb"/><text x="80" y="1539" class="tiny">Customer / control plane</text>
+  <circle cx="285" cy="1534" r="7" fill="#7c3aed"/><text x="300" y="1539" class="tiny">Orchestration</text>
+  <circle cx="445" cy="1534" r="7" fill="#06b6d4"/><text x="460" y="1539" class="tiny">Connector / worker</text>
+  <circle cx="630" cy="1534" r="7" fill="#059669"/><text x="645" y="1539" class="tiny">AWS live resources</text>
+  <circle cx="815" cy="1534" r="7" fill="#f59e0b"/><text x="830" y="1539" class="tiny">Approval / entitlement gate</text>
+  <circle cx="1050" cy="1534" r="7" fill="#e11d48"/><text x="1065" y="1539" class="tiny">Risk / remediation</text>
+  <text x="1370" y="1539" class="tiny" font-weight="700">Sensitive artifacts stay local. Hosted SaaS receives sanitized metadata, status, approvals, and report indexes only.</text>
+</svg>
