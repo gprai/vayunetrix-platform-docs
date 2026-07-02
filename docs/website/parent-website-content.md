@@ -1,43 +1,75 @@
-# Parent Website Content
+﻿# Parent Website Content
 
-This page contains draft public website copy for `www.vayunetrix.com` and future `portal.vayunetrix.com` linking.
+This page contains public website positioning for [www.vayunetrix.com](https://www.vayunetrix.com) and the product-launch model.
 
 ## Hero Message
 
-Build and operate your AWS foundation with guided architecture, guarded execution, continuous governance, drift remediation, cost control, and audit evidence.
+Build and operate cloud platforms with guided architecture, guarded execution, continuous governance, drift remediation, cost control, and audit evidence.
 
 ## Short Product Description
 
-VayuNetrix AWS Platform helps organizations design, provision, govern, secure, remediate, and evidence AWS environments through a guided portal and secure local connector model.
+VayuNetrix helps organizations select cloud platform capabilities, approve high-impact changes, operate securely, and keep evidence of what happened without exposing sensitive customer artifacts in the hosted product database.
 
-## Value Proposition
+## Current Product: AWS Platform Engineering
 
-- Guide customers through AWS platform decisions.
-- Reduce manual setup and cloud governance confusion.
-- Add approval gates before risky changes.
-- Keep sensitive customer artifacts local.
-- Provide governance, security, drift, remediation, cost, and evidence views.
+Product portal:
+
+- [aws-platform.vayunetrix.com](https://aws-platform.vayunetrix.com)
+
+Product API:
+
+- [api.aws-platform.vayunetrix.com](https://api.aws-platform.vayunetrix.com)
+
+Private implementation repo:
+
+- [gprai/aws-platform-engineering](https://github.com/gprai/aws-platform-engineering)
+
+## Parent Website Responsibilities
+
+The parent website owns:
+
+- customer registration
+- email confirmation
+- customer command center
+- product discovery
+- package and capability selection
+- pricing, quote, order, and subscription status
+- support entry
+- product portal launch
+
+## AWS Platform Portal Responsibilities
+
+The AWS Platform portal owns:
+
+- Workspace Home
+- entitlement-aware product views
+- guided intake and architecture workflows
+- approval center
+- live operations console
+- governance/security/drift/remediation/cost/evidence dashboards
+- connector-aware execution status
 
 ## Suggested Navigation
 
-- Platform
-- Architecture
-- Security
-- Packages
-- Roadmap
-- FAQ
-- Sign In / Portal
+- Home
+- Products
+- Solutions
+- Resources
+- Pricing
+- About
+- Command Center
 
-## Suggested Call To Action
+## Suggested Calls To Action
 
 - Start guided AWS platform assessment
 - Request a demo
 - Join private beta
+- Open Command Center
 
-## Portal Domain
+## Future Product: GateForge
 
-Recommended product domain:
+GateForge is planned as a VayuNetrix product for approved infrastructure template delivery and audit evidence.
 
-- `portal.vayunetrix.com`
+Planned launch path:
 
-The parent website can link users to portal registration while the portal owns signup, email confirmation, package selection, workspace connection, approvals, and live operations.
+- [www.vayunetrix.com/GateForge](https://www.vayunetrix.com/GateForge)

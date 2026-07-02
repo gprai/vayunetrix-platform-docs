@@ -1,17 +1,18 @@
-# Service Packages
+﻿# Service Packages
 
-The platform is designed around package tiers and optional service categories.
+The platform is designed around package tiers and optional service categories. The parent website owns product selection, pricing, quote/order status, subscription state, and entitlement state. The AWS Platform portal consumes those entitlements and shows only what the customer is allowed to use.
 
 ## Learning Mode
 
-For individual learning and small experiments.
+For individual learning, validation, and small experiments.
 
 Typical characteristics:
 
 - free or low-cost entry
-- limited account count
-- basic local environment and guided AWS foundation workflows
+- very limited account quantity
+- basic local environment and guided AWS foundation workflow
 - strong safety defaults
+- simplified architecture and intake choices
 
 ## Startup Mode
 
@@ -20,9 +21,10 @@ For small teams that need a practical AWS foundation with basic governance.
 Typical characteristics:
 
 - account quota suitable for early teams
-- basic governance and security add-ons
+- governance and security add-on options
 - controlled pricing band
-- support for workspace onboarding and evidence generation
+- workspace onboarding and evidence summaries
+- guided but still lightweight operating model
 
 ## Enterprise Mode
 
@@ -35,6 +37,7 @@ Typical characteristics:
 - drift and remediation subscription options
 - cost governance, showback, and chargeback support
 - richer approval and evidence workflows
+- enterprise networking and account factory expansion paths
 
 ## Service Categories
 
@@ -42,6 +45,7 @@ Typical characteristics:
 
 - local workspace setup
 - bootstrap workflow
+- intake validation
 - account and organization planning
 - requested baseline infrastructure workflows
 
@@ -51,6 +55,7 @@ Typical characteristics:
 - governance engine
 - security compliance engine
 - live AWS assessment support
+- evidence summaries
 
 ### Category C: Drift Detection And Remediation
 
@@ -59,6 +64,7 @@ Typical characteristics:
 - approval workflows
 - remediation execution gates
 - evidence before and after remediation
+- subscription-style long-term operations option
 
 ### Category D: Cost Governance And Reporting
 
@@ -69,6 +75,21 @@ Typical characteristics:
 - budget alerts
 - showback and chargeback metadata
 
+## Entitlement Boundary
+
+Package selection on the parent website should control:
+
+- visible portal pages
+- enabled portal actions
+- account quotas
+- region limits
+- Terraform and remediation execution eligibility
+- cost governance views
+- drift/remediation subscription access
+- enterprise networking and account factory features
+
+The AWS Platform portal should block unpaid, expired, cancelled, suspended, out-of-region, or out-of-quota work before planning or execution.
+
 ## Pricing Note
 
-Final public pricing is a commercial decision and may change by customer size, account count, selected regions, add-ons, and support model.
+Final public pricing is a commercial decision and may change by customer size, account count, selected regions, add-ons, support model, and launch phase.

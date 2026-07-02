@@ -1,44 +1,76 @@
-# Business Overview
+﻿# Business Overview
 
-VayuNetrix AWS Platform is designed for teams that need a structured way to build and operate AWS foundations without turning every customer engagement into a bespoke consulting project.
+VayuNetrix AWS Platform is a guided AWS platform engineering product for customers that want a structured AWS foundation without turning every engagement into a custom consulting exercise.
+
+The business goal is simple: help a customer select the AWS platform capabilities they need, understand the package and approval path, safely create or operate the environment, and receive evidence that governance, security, drift, remediation, and cost controls are being handled.
+
+## How The Product Is Sold And Used
+
+The commercial entry point is the VayuNetrix parent website:
+
+- Website: [www.vayunetrix.com](https://www.vayunetrix.com)
+- Parent website repo: [gprai/vayunetrix](https://github.com/gprai/vayunetrix)
+
+The parent website is responsible for customer-facing business steps:
+
+- registration and email confirmation
+- product discovery
+- package and capability selection
+- pricing, quote, order, and subscription status
+- customer command center
+- support entry
+- product launch into the AWS Platform portal
+
+The AWS Platform portal is the product workspace:
+
+- Portal: [aws-platform.vayunetrix.com](https://aws-platform.vayunetrix.com)
+- API: [api.aws-platform.vayunetrix.com](https://api.aws-platform.vayunetrix.com)
+- Private implementation repo: [gprai/aws-platform-engineering](https://github.com/gprai/aws-platform-engineering)
+
+The portal receives a signed handoff from the parent website. After that handoff, the customer sees the workspace and only the capabilities their selected package allows.
 
 ## Problem
 
 Many organizations struggle with the same AWS foundation questions:
 
-- How many accounts do we need?
+- How many AWS accounts do we need?
 - Which regions should be enabled?
-- How do we separate workloads, security, shared services, and sandbox usage?
-- How do we enforce approvals before infrastructure changes?
-- How do we prove governance, security, remediation, and cost controls are working?
-- How do we operate the environment after initial setup?
+- How should workloads, security, shared services, sandbox, and exception accounts be separated?
+- Who approves account creation, network changes, security baseline changes, and remediation?
+- How do we prove governance and security are working?
+- How do we detect drift and decide what is safe to fix automatically?
+- How do we show cost by account, team, environment, application, or cost center?
 
-AWS services such as Organizations, Control Tower, IAM Identity Center, Security Hub, GuardDuty, Config, CloudTrail, and Terraform are powerful, but customers still need a guided operating model around them.
+AWS services such as Organizations, Control Tower, IAM Identity Center, GuardDuty, Security Hub, Config, CloudTrail, and Terraform are powerful. Customers still need a guided operating layer around them.
 
 ## Product Vision
 
 VayuNetrix provides a guided platform creation and operations experience:
 
-1. A customer selects their business size, regions, environments, account model, governance level, security baseline, networking pattern, and cost controls.
-2. The platform validates intake and package entitlements.
-3. The platform generates plans and approval gates before any change.
-4. Execution is routed through controlled workflows, not ad hoc scripts.
-5. Governance, security, drift, remediation, cost, and evidence are continuously reported.
+1. The customer signs in through the parent website.
+2. The customer selects AWS Platform Engineering and chooses the package/capabilities they want.
+3. The parent website owns quote, order, subscription, and entitlement status.
+4. The AWS Platform portal opens through a signed product handoff.
+5. The portal guides intake, architecture, validation, approval, execution status, evidence, governance, security, drift, remediation, and cost views.
+6. Sensitive customer artifacts stay in the customer-controlled connector/runtime boundary.
 
 ## Value For Customers
 
 - Faster AWS foundation planning.
 - Safer provisioning with review and approval gates.
+- Clear package-to-capability boundaries.
 - Repeatable governance and security checks.
 - Drift detection and remediation workflows.
 - Cost visibility by team, environment, application, and account.
 - Audit evidence without manually assembling screenshots and command output.
-- A productized experience instead of one-off setup scripts.
+- Productized onboarding instead of scattered scripts and one-off setup.
 
-## Main Implementation Repo
+## Product Family Direction
 
-The implementation lives in the private repository:
+VayuNetrix is expanding beyond AWS Platform Engineering. The next product under development is GateForge:
 
-- [gprai/aws-platform-engineering](https://github.com/gprai/aws-platform-engineering)
+- GateForge repo: [gprai/GateForge](https://github.com/gprai/GateForge)
+- Planned launch path: [www.vayunetrix.com/GateForge](https://www.vayunetrix.com/GateForge)
 
-This public repository explains the product, architecture, trust boundary, and customer journey without exposing implementation code.
+GateForge is focused on approved infrastructure templates, Terraform plan review, policy checks, named approvals, controlled apply, and audit evidence for regulated engineering teams.
+
